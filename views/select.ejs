@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <p class="secret-text">Type Account number to Search Details</p>
+    <hr>
+    <form action="/select" method ="POST">
+    <input class="form-control text-center" name="accountno" /><br>
+  <br> 
+    <button class="btn btn-dark btn-lg" type="submit" role="button">Search</button>
+  </form>
+  </div>
+</div>
+<div class="jumbotron text-center">
+  <div class="container">
+    <% user.forEach(item => { %>
+      <p> <strong>Name : <%=item.name%></strong><br>
+   <strong>Balance: ₹<%=item.balance%> </strong><br>
+      <strong>Email: <%=item.email%></strong><br>
+       <strong>Account no: <%=item.accountno%></strong><br>
+          </p>
+      <hr>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

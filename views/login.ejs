@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <h1>Transfer</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <% ite.forEach(element => { %>
+          <p> <strong>Name : <%=element.name%></strong><br>
+            <strong> Present Amount: ₹<%=element.balance%> </strong><br>
+               <strong>Email: <%=element.email%></strong><br>
+                <strong>Account no: <%=element.accountno%></strong><br>
+                   </p>
+               <hr> 
+               <% }) %> 
+               <strong>Amount to be Transfered: <%=value%></strong><br>
+               <a class="btn btn-dark btn-lg" href="/transfered" role="button">Transfer</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%- include('partials/footer') %>
